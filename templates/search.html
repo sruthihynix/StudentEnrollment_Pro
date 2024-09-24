@@ -1,0 +1,15 @@
+
+<html>
+{% include "base.html"%}  <!-- Include your base template correctly -->
+
+<body>
+<h1 style="text-align: center;"> {{title}}</h1><!-- Place the heading in the body -->
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+<form method='post'>
+    {% csrf_token%}
+    {{form.as_p}} <!-- Render the form fields as <p> tags --><!-- form is the  dictionary variable given in function register-->
+    <button type="submit">Search </button>
+
+</form></div>
+</body>
+</html>

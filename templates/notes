@@ -1,0 +1,25 @@
+1.First page
+
+
+ack.html --> this page created to display acknoledgement / messages  to user
+
+        if len(queryset)==0:
+            return render(request, 'ack.html', {'title':"Student details not found... Please Enter correct name"})
+-----------------------------------------------------------------------------------------------------
+context={
+        "title":title,
+        'form':form,
+            }
+    return render(request,'search.html', context)
+
+  -->
+  A dictionary named 'context' is created to hold data that will be passed to the template (search.html).
+  -->
+render(request, 'search.html', context):
+The render function is used to combine a template with a context dictionary and return an HttpResponse object.
+request: The HTTP request object from the view.
+'search.html': This is the name of the template that will be rendered.
+ It should be an HTML file located in one of the directories listed in the TEMPLATES setting in your Django project.
+context: The data passed to the template.
+ In this case, the template will have access to the title and form variables
+ ------------------------------------------

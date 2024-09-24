@@ -1,0 +1,35 @@
+
+<html >
+<head>
+  {% include "base.html"%}
+  <h1  style="text-align: center;"> {{title}}</h1>
+</head>
+<body>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+<table border=1>
+    <thead>
+    <tr>
+        <td>Student ID</td>
+        <td>Name</td>
+        <td>class</td>
+        <td>Address</td>
+        <td>School</td>
+        <td> E-mail</td>
+    </tr>
+    </thead>
+    {% for i in queryset %}
+    <tbody>
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.s_name}}</td>
+            <td>{{i.s_class}}</td>
+            <td>{{i.s_addr}}</td>
+            <td>{{i.s_school}}</td>
+             <td>{{i.s_email}}</td>
+        </tr>
+    </tbody>
+    {% endfor %}
+</table></div>
+</body>
+</html>
